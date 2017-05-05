@@ -127,7 +127,8 @@ angular.module('factorioApp')
         					break;
         				default:
         					break;
-        			}	
+        			}
+        			product.speed = product.speed * (1 + effectsList[3].value / 100);	
         		}else{
         			product.speed = 1;					//其余计为1
         		}
@@ -280,6 +281,7 @@ angular.module('factorioApp')
 	        setProduct('铁板', 				3.5, 	'1*铁矿'								, 1 , 	'1');
 	    	setProduct('铜板', 				3.5, 	'1*铜矿'								, 1 , 	'1');
 	    	setProduct('钢材', 				17.5, 	'5*铁板'		 						, 1 , 	'1');
+	       	setProduct('石砖', 				3.5, 	'2*石头'						 		, 1 ,	'1');
 	    	
 	    	// type-7 抽油类 生产自抽油机
 	    	setProduct('原油', 				1, 		''		 							, 1 , 	'7');
@@ -341,7 +343,6 @@ angular.module('factorioApp')
 	       	setProduct('小型电线杆', 			0.5, 	'2*木板,2*铜线'						, 2  		);
 	       	setProduct('管道', 				0.5, 	'1*铁板'					 						);
 	       	setProduct('地下管道', 			0.5, 	'10*管道,5*铁板'				 		, 2			);
-	       	setProduct('石砖', 				3.5, 	'2*石头'						 					);
 	       	setProduct('铁斧镐', 			0.5, 	'3*铁板,2*铁棒'							 		);
 	       	setProduct('修理包', 			0.5, 	'2*电路板,2*铁齿轮'						 		);
 	       	setProduct('锅炉', 				0.5, 	'1*石炉,4*管道'							 		);

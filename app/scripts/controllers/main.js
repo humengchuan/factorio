@@ -12,15 +12,15 @@
 angular.module('factorioApp')
     .controller('MainCtrl', function(productService) {
         var vm = this;
-
+        
         vm.products = productService.getScienceProducts();
 
         vm.effectsList = [								// 影响因素列表
         	{name: '采矿机', type: '1'},
         	{name: '组装机', type: '1'},
         	{name: '冶炼炉', type: '1'},
+        	{name: '采集提速科技', value: 0},
         ]; 				
-
         vm.productList = []; 							// 所选的产品列表
         vm.productType = 'scienceProducts'; 			// 产品列表类型
         vm.miningEffect = vm.effectsList[0];			// 采矿影响
